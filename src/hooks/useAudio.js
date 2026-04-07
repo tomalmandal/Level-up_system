@@ -37,17 +37,15 @@ export const useAudio = () => {
   }, [muted]);
 
   const toggle = () => {
-    setMuted((m) => {
-      const next = !m;
-      if (audioRef.current) {
-        if (next) {
-          audioRef.current.pause();
-        } else {
-          audioRef.current.play().catch(() => {});
-        }
-      }
-      return next;
-    });
+    if (!audioRef.current) return;
+
+    const next = !audioRef.current.muted;
+    audioRef.current.muted = next;
+    setMuted(next);
+
+    if (!next) {
+      audioRef.current.play().catch(() => {});
+    }
   };
 
   return { muted, toggle };
