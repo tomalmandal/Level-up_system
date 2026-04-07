@@ -1456,48 +1456,81 @@ body {
 }
 
 @media (max-width: 768px) {
-  .home-inner {
+  .screen,
+  .home-inner,
+  .rank-screen {
     min-height: auto;
     height: auto;
-    padding-bottom: 24px;
-  }
-
-  .rank-card-wrap {
-    padding: 0 10px;
-    margin-top: 10px;
-  }
-
-  .rank-card {
-    width: 100%;
-  }
-
-  .rc-name {
-    font-size: 13px;
-    letter-spacing: 1px;
-  }
-
-  .ng-btn {
-    min-height: 110px;
-    padding: 14px 10px;
-  }
-
-  .ng-label {
-    font-size: 11px;
-    line-height: 1.3;
-    word-break: break-word;
+    padding: 0 12px 28px;
+    overflow-x: hidden;
   }
 
   .home-top {
-    padding: 18px 14px 8px;
+    padding: 18px 0 10px;
   }
 
   .home-title {
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 3px;
+    text-align: center;
   }
 
   .home-sub {
     font-size: 8px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .rank-card-wrap,
+  .rank-hero {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .rank-card,
+  .rank-hero-card {
+    min-height: 240px;
+    height: auto;
+  }
+
+  .rc-name {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .next-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .ng-btn {
+    min-height: 120px;
+    padding: 12px 8px;
+  }
+
+  .ng-label {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+  .rank-list-item {
+    padding: 14px 16px;
+    min-height: 72px;
+  }
+
+  .rank-list-item .title {
+    font-size: 14px;
+  }
+
+  .rank-list-item .sub {
+    font-size: 11px;
+  }
+
+  .mute-fab {
+    width: 54px;
+    height: 54px;
+    right: 12px;
+    bottom: 90px;
   }
 }
