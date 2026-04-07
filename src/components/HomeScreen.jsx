@@ -1,13 +1,13 @@
-import { getRank, getNextRank, getRankProgress } from '../data/ranks';
-import { GUILD_IMAGE_SRC } from '../data/guildImage';
-import SwordsIcon from './SwordsIcon';
-import { toast } from './Toast';
+import { getRank, getRankProgress } from "../data/ranks";
+import { GUILD_IMAGE_SRC } from "../data/guildImage";
+import SwordsIcon from "./SwordsIcon";
+import { toast } from "./Toast";
 
 const architectRestriction = () => {
   toast(
-    '◈ ARCHITECT ACCESS DENIED :: Quest protocols are locked by the System Overseer ◈',
-    '#93c5fd',
-    'rgba(30,58,138,.18)'
+    "◈ ARCHITECT ACCESS DENIED :: Quest protocols are locked by the System Overseer ◈",
+    "#93c5fd",
+    "rgba(30,58,138,.18)",
   );
 };
 
@@ -17,16 +17,16 @@ const HomeScreen = ({ userState, onNavigate }) => {
 
   // Guild image style — exact from original HTML
   const guildImgStyle = {
-    position: 'absolute',
+    position: "absolute",
     inset: 0,
-    width: '138%',
-    height: '138%',
-    left: '-19%',
-    top: '-19%',
-    objectFit: 'contain',
+    width: "138%",
+    height: "138%",
+    left: "-19%",
+    top: "-19%",
+    objectFit: "contain",
     opacity: 0.11,
-    filter: 'blur(.15px) drop-shadow(0 0 20px rgba(255,255,255,.07))',
-    pointerEvents: 'none',
+    filter: "blur(.15px) drop-shadow(0 0 20px rgba(255,255,255,.07))",
+    pointerEvents: "none",
   };
 
   return (
@@ -40,7 +40,7 @@ const HomeScreen = ({ userState, onNavigate }) => {
 
         {/* Rank Card — exact layout from original */}
         <div className="rank-card-wrap">
-          <div className="rank-card" onClick={() => onNavigate('rank')}>
+          <div className="rank-card" onClick={() => onNavigate("rank")}>
             <div className="rc-hero" style={{ background: rank.bg }}>
               <div className="rc-grid" />
               {/* Guild image — exact from original */}
@@ -88,15 +88,21 @@ const HomeScreen = ({ userState, onNavigate }) => {
 
         {/* 4-grid Nav — fills remaining page height */}
         <div className="nav-grid">
-          <div className="ng-btn ng-quests" onClick={() => onNavigate('quests')}>
+          <div
+            className="ng-btn ng-quests"
+            onClick={() => onNavigate("quests")}
+          >
             <div className="ng-icon">📋</div>
             <div className="ng-label">Daily Quests</div>
           </div>
-          <div className="ng-btn ng-rank" onClick={() => onNavigate('rank')}>
+          <div className="ng-btn ng-rank" onClick={() => onNavigate("rank")}>
             <div className="ng-icon">🏆</div>
             <div className="ng-label">My Rank</div>
           </div>
-          <div className="ng-btn ng-history" onClick={() => onNavigate('history')}>
+          <div
+            className="ng-btn ng-history"
+            onClick={() => onNavigate("history")}
+          >
             <div className="ng-icon">📜</div>
             <div className="ng-label">History</div>
           </div>
