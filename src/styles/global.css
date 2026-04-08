@@ -50,9 +50,7 @@ body {
 
 /* Screen base */
 .screen {
-  height: 100vh;
-  max-height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -880,6 +878,9 @@ body {
 /* ══════════════════════ QUESTS ══════════════════════ */
 .quest-screen {
   background: #05050d;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
 }
 .quest-meta {
   padding: 12px 16px 8px;
