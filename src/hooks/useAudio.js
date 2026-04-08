@@ -8,7 +8,7 @@ export const useAudio = () => {
     // Create audio element for background music
     const audio = new Audio("/sololevelingsoundtrack.m4a"); // match your filename
     audio.loop = true;
-    audio.volume = 0.12; // low volume — sounds like bg
+    audio.volume = 0.04; // low volume — sounds like bg
     audioRef.current = audio;
 
     // Try to play — will be blocked until user clicks anything

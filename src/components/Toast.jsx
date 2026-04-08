@@ -24,7 +24,7 @@ const Toast = () => {
 
       timerRef.current = setTimeout(() => {
         setState((s) => ({ ...s, visible: false }));
-      }, 2800);
+      }, 1300);
     };
 
     return () => {
